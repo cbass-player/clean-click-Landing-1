@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Click | Limpieza Profesional de Sillones a Vapor</title>
+    <meta name="description" content="Servicio experto de limpieza de sillones y tapices a vapor. Eliminamos manchas, ácaros y olores. ¡Cotiza tu servicio a domicilio hoy!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Estilos personalizados para complementar Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Colores de la marca Clean Click */
+        .bg-brand-primary { background-color: #F7E8F6; }
+        .bg-brand-secondary { background-color: #E8D5E5; }
+        .bg-brand-accent { background-color: #D9C2D4; }
+        .text-brand-purple { color: #6D28D9; } /* Un morado más fuerte para contraste */
+        .btn-primary {
+            background-color: #8B5CF6; /* Morado principal para botones */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #7C3AED;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-brand-primary text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="#" id="home-link" class="flex items-center space-x-3">
+                <img src="https://iili.io/FWZd4HJ.png" alt="Logo de Clean Click" class="h-10 w-auto object-contain">
+                <span class="hidden md:inline text-xl font-bold text-gray-800">Clean Click. Aroma a limpio</span>
+            </a>
+            
+            <!-- Desktop Navigation & CTA -->
+            <div class="hidden md:flex items-center space-x-6">
+                <nav class="flex items-center space-x-6">
+                    <a href="#beneficios" class="text-gray-600 hover:text-brand-purple font-medium">Beneficios</a>
+                    <a href="#como-funciona" class="text-gray-600 hover:text-brand-purple font-medium">Proceso</a>
+                    <a href="#testimonios" class="text-gray-600 hover:text-brand-purple font-medium">Testimonios</a>
+                    <a href="#otros-servicios" class="text-gray-600 hover:text-brand-purple font-medium">Servicios</a>
+                    <a href="#faq" class="text-gray-600 hover:text-brand-purple font-medium">Preguntas</a>
+                </nav>
+                <a href="https://wa.me/+56957079910?text=Hola,%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" target="_blank" id="cta-header" class="inline-block btn-primary font-bold py-2 px-6 rounded-full shadow-lg">
+                    <i class="fab fa-whatsapp"></i> Cotiza Aquí
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-800 hover:text-brand-purple">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Panel -->
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full right-4 mt-2 w-56 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl border border-gray-200/50">
+                <nav class="flex flex-col p-2">
+                    <a href="#beneficios" class="mobile-link text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md p-3 font-medium">Beneficios</a>
+                    <a href="#como-funciona" class="mobile-link text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md p-3 font-medium">Proceso</a>
+                    <a href="#testimonios" class="mobile-link text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md p-3 font-medium">Testimonios</a>
+                    <a href="#otros-servicios" class="mobile-link text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md p-3 font-medium">Servicios</a>
+                    <a href="#faq" class="mobile-link text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md p-3 font-medium">Preguntas</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6 py-12 md:py-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Columna de Texto (Izquierda) -->
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                    Devuélvele la vida a tus sillones.
+                    <span class="text-brand-purple">Limpieza profunda a vapor.</span>
+                </h1>
+                <p class="mt-4 text-lg text-gray-600">
+                    Eliminamos manchas difíciles, ácaros, bacterias y malos olores en horas, directamente en tu domicilio. ¡Tu hogar más limpio y saludable!
+                </p>
+                <div class="mt-8">
+                    <a href="https://wa.me/+56957079910?text=Hola,%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" target="_blank" id="cta-hero" class="inline-block btn-primary text-lg font-bold py-4 px-10 rounded-full shadow-xl transform hover:scale-105 transition-transform">
+                        Cotizar Mi Limpieza Ahora
+                    </a>
+                </div>
+                <div class="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 text-gray-600 max-w-lg mx-auto md:mx-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                        <span class="md:whitespace-nowrap">Satisfacción Garantizada</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-leaf text-green-500"></i>
+                        <span class="md:whitespace-nowrap">Productos Ecológicos</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-bolt text-green-500"></i>
+                        <span class="md:whitespace-nowrap">Atención Rápida</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-award text-green-500"></i>
+                        <span class="md:whitespace-nowrap">Expertos en Tapices</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Columna de Imagen (Derecha) -->
+            <div class="relative">
+                <img src="https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                     alt="Sillón impecablemente limpio en una sala de estar luminosa" 
+                     class="rounded-3xl shadow-2xl w-full max-h-[65vh] md:max-h-[75vh] object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/F7E8F6/6D28D9?text=Tu+Sillón+Como+Nuevo';">
+                <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-lg flex items-center space-x-3">
+                    <div class="bg-green-100 p-2 rounded-full">
+                        <i class="fas fa-shield-alt text-green-600"></i>
+                    </div>
+                    <p class="text-sm font-semibold">Elimina 99.9% de ácaros</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección de Beneficios -->
+    <section id="beneficios" class="bg-brand-secondary py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900">Resultados que amarás</h2>
+            <p class="mt-2 text-gray-600">Más que una limpieza, una renovación para tu hogar.</p>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <!-- Beneficio 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-purple-100 inline-block p-4 rounded-full">
+                        <i class="fas fa-spray-can-sparkles text-2xl text-brand-purple"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4">Colores más Vivos</h3>
+                    <p class="mt-2 text-gray-600">Nuestro sistema a vapor reaviva los colores originales de tus tapices, dejándolos como nuevos.</p>
+                </div>
+                <!-- Beneficio 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-purple-100 inline-block p-4 rounded-full">
+                        <i class="fas fa-shield-virus text-2xl text-brand-purple"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4">Hogar Desinfectado</h3>
+                    <p class="mt-2 text-gray-600">El vapor a alta temperatura elimina virus, bacterias y ácaros, creando un ambiente más saludable.</p>
+                </div>
+                <!-- Beneficio 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-purple-100 inline-block p-4 rounded-full">
+                        <i class="fas fa-wind text-2xl text-brand-purple"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4">Adiós a los Olores</h3>
+                    <p class="mt-2 text-gray-600">Neutralizamos olores de mascotas, comida o humedad, dejando una sensación de frescura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cómo Funciona -->
+    <section id="como-funciona" class="bg-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900">Nuestro Proceso en 3 Simples Pasos</h2>
+            <div class="mt-12 grid md:grid-cols-3 gap-8 relative">
+                <!-- Línea de conexión -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2">
+                    <svg width="100%" height="2">
+                        <line x1="0" y1="1" x2="100%" y2="1" stroke="#D9C2D4" stroke-width="2" stroke-dasharray="10 5"/>
+                    </svg>
+                </div>
+                <!-- Paso 1 -->
+                <div class="relative bg-brand-primary p-8 rounded-2xl shadow-md">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-purple text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                    <i class="fas fa-mobile-alt text-4xl text-brand-purple mt-4"></i>
+                    <h3 class="text-xl font-bold mt-4">Cotiza</h3>
+                    <p class="mt-2 text-gray-600">Envíanos una foto de tu sillón por WhatsApp para darte un presupuesto exacto y rápido.</p>
+                </div>
+                <!-- Paso 2 -->
+                <div class="relative bg-brand-primary p-8 rounded-2xl shadow-md">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-purple text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                    <i class="fas fa-calendar-check text-4xl text-brand-purple mt-4"></i>
+                    <h3 class="text-xl font-bold mt-4">Agenda</h3>
+                    <p class="mt-2 text-gray-600">Coordinamos el día y la hora que más te acomode. ¡Nos adaptamos a tu rutina!</p>
+                </div>
+                <!-- Paso 3 -->
+                <div class="relative bg-brand-primary p-8 rounded-2xl shadow-md">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-purple text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                    <i class="fas fa-couch text-4xl text-brand-purple mt-4"></i>
+                    <h3 class="text-xl font-bold mt-4">Disfruta</h3>
+                    <p class="mt-2 text-gray-600">Realizamos la limpieza en tu hogar y en pocas horas podrás disfrutar de tu sillón renovado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="bg-brand-secondary py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900">Lo que dicen nuestros clientes</h2>
+            <p class="mt-2 text-gray-600">La satisfacción de nuestros clientes es nuestra mayor prioridad.</p>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="rounded-2xl shadow-lg overflow-hidden aspect-video">
+                    <iframe id="youtube-video-1" class="w-full h-full" src="https://www.youtube.com/embed/pHdzZYcw5Gc?enablejsapi=1" title="Video de testimonio de cliente 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="rounded-2xl shadow-lg overflow-hidden aspect-video">
+                    <iframe id="youtube-video-2" class="w-full h-full" src="https://www.youtube.com/embed/Yx4lKEeCwss?enablejsapi=1" title="Video de testimonio de cliente 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="rounded-2xl shadow-lg overflow-hidden aspect-video">
+                    <iframe id="youtube-video-3" class="w-full h-full" src="https://www.youtube.com/embed/gtggraD_N_w?enablejsapi=1" title="Video de testimonio de cliente 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Otros Servicios -->
+    <section id="otros-servicios" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-900">También limpiamos otros tapices</h2>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Servicio Sillas -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden text-center">
+                    <div class="p-4">
+                        <img src="https://iili.io/FWQZMmX.png" alt="Sillas de comedor" class="w-full h-40 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold px-4 pb-4">Sillas de Comedor</h3>
+                </div>
+                <!-- Servicio Colchones -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden text-center">
+                    <div class="p-4">
+                        <img src="https://iili.io/FWQmYuI.png" alt="Colchón" class="w-full h-40 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold px-4 pb-4">Colchones</h3>
+                </div>
+                <!-- Servicio Alfombras -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden text-center">
+                    <div class="p-4">
+                        <img src="https://iili.io/FWZ9Aaj.png" alt="Alfombra" class="w-full h-40 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold px-4 pb-4">Alfombras y Tapetes</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-brand-primary py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-900">Preguntas Frecuentes</h2>
+            <div class="mt-8 max-w-3xl mx-auto">
+                <!-- Pregunta 1 -->
+                <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-1" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        ¿Cuál es el área de cobertura?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">Actualmente cubrimos la Región Metropolitana completamente. Adicionalmente, llegamos a Algarrobo, El Quisco, Papudo y Zapallar.</p></div>
+                </div>
+                <!-- Pregunta 2 -->
+                <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-2" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        ¿Cuánto demora la limpieza de un sillón?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">En promedio, la limpieza de un sillón puede tardar 45 minutos.</p></div>
+                </div>
+                <!-- Pregunta 3 -->
+                <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-3" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        ¿Qué tan rápido puedo agendar?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">Nuestro equipo de atención está siempre disponible. El tiempo de respuesta promedio para coordinar tu servicio es de solo 5 minutos.</p></div>
+                </div>
+                 <!-- Pregunta 4 -->
+                 <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-4" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        Si escribo hoy, ¿cuándo pueden venir?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">Normalmente agendamos con dos días hábiles de anticipación. Si agendas hoy, lo más probable es que te visitemos pasado mañana.</p></div>
+                </div>
+                <!-- Pregunta 5 -->
+                <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-5" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        ¿Se eliminan todas las manchas?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">No todas las manchas logran salir, ya que el resultado depende de la antigüedad y del tipo de mancha. Damos nuestro mejor esfuerzo para quitarlas, pero es importante saber que algunas son muy difíciles de eliminar por completo.</p></div>
+                </div>
+                <!-- Pregunta 6 -->
+                <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-6" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        ¿El servicio tiene garantía?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">Sí, nuestra garantía se aplica hasta por 7 días después de realizado el servicio. En caso de ser necesario, agendaremos una nueva visita dentro de los siguientes 7 días para revisar el trabajo.</p></div>
+                </div>
+                <!-- Pregunta 7 -->
+                <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-7" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        ¿Cuáles son los tiempos de secado?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">Los tiempos promedio son: sillones y sofás, 7 horas; colchones, 5 horas; y alfombras, 12 horas.</p></div>
+                </div>
+                <!-- Pregunta 8 -->
+                <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-8" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        ¿Qué otros tapices limpian?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">Además de sillones, nos especializamos en alfombras y colchones. Para colchones, recomendamos agendar el servicio temprano para asegurar un secado eficiente durante el día.</p></div>
+                </div>
+                <!-- Pregunta 9 -->
+                <div class="bg-white rounded-lg shadow-sm mb-4">
+                    <button id="faq-9" class="accordion-toggle w-full text-left p-4 font-semibold flex justify-between items-center">
+                        ¿Cómo puedo pagar?
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content"><p class="text-gray-600 px-4 pt-0 pb-4">Aceptamos todos los medios de pago: efectivo, transferencia, débito y tarjeta de crédito.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="container mx-auto px-6 py-20 text-center">
+        <h2 class="text-4xl font-extrabold text-gray-900">¿Lista para renovar tu hogar?</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">No esperes más para disfrutar de un sillón limpio, fresco y libre de alérgenos. ¡El cambio te sorprenderá!</p>
+        <div class="mt-8">
+            <a href="https://wa.me/+56957079910?text=Hola,%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" target="_blank" id="cta-final" class="inline-block btn-primary text-xl font-bold py-4 px-12 rounded-full shadow-xl transform hover:scale-105 transition-transform">
+                ¡Sí, Quiero Cotizar!
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Clean Click. Todos los derechos reservados.</p>
+            <p class="text-gray-400 mt-2">Servicio de limpieza de tapices en la Región Metropolitana.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="https://www.instagram.com/cleanclick.aromaalimpio/" target="_blank" class="text-2xl hover:text-brand-purple transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/+56957079910?text=Hola,%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="text-2xl hover:text-brand-purple transition-colors"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/+56957079910?text=Hola,%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" 
+       target="_blank" 
+       id="cta-flotante"
+       class="fixed bottom-5 right-5 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transform hover:scale-110 transition-transform z-40">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Lógica para el menú de hamburguesa ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', (event) => {
+                event.stopPropagation();
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (event) => {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                if (!isClickInsideMenu && !isClickOnToggle) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // --- Lógica para el desplazamiento suave (Smooth Scroll) ---
+            const homeLink = document.getElementById('home-link');
+            if(homeLink) {
+                homeLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                if (anchor.getAttribute('href').length > 1) {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    });
+                }
+            });
+
+            // --- Lógica para el acordeón de FAQ ---
+            document.querySelectorAll('.accordion-toggle').forEach(button => {
+                button.addEventListener('click', () => {
+                    const accordionContent = button.nextElementSibling;
+                    const icon = button.querySelector('i');
+                    const isActive = button.classList.contains('active');
+
+                    document.querySelectorAll('.accordion-toggle').forEach(otherButton => {
+                        if (otherButton !== button) {
+                            otherButton.classList.remove('active');
+                            otherButton.nextElementSibling.style.maxHeight = '0';
+                            otherButton.querySelector('i').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    if (!isActive) {
+                        button.classList.add('active');
+                        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        button.classList.remove('active');
+                        accordionContent.style.maxHeight = '0';
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
