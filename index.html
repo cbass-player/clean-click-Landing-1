@@ -228,15 +228,15 @@
             <div class="mt-12 grid md:grid-cols-3 gap-8">
                 <!-- Testimonio 1 -->
                 <div class="rounded-2xl shadow-lg overflow-hidden aspect-video">
-                    <iframe id="youtube-video-1" class="w-full h-full" src="https://www.youtube.com/embed/pHdzZYcw5Gc?enablejsapi=1" title="Video de testimonio de cliente 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div id="player1"></div>
                 </div>
                 <!-- Testimonio 2 -->
                 <div class="rounded-2xl shadow-lg overflow-hidden aspect-video">
-                    <iframe id="youtube-video-2" class="w-full h-full" src="https://www.youtube.com/embed/Yx4lKEeCwss?enablejsapi=1" title="Video de testimonio de cliente 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div id="player2"></div>
                 </div>
                 <!-- Testimonio 3 -->
                 <div class="rounded-2xl shadow-lg overflow-hidden aspect-video">
-                    <iframe id="youtube-video-3" class="w-full h-full" src="https://www.youtube.com/embed/gtggraD_N_w?enablejsapi=1" title="Video de testimonio de cliente 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div id="player3"></div>
                 </div>
             </div>
         </div>
@@ -384,6 +384,76 @@
     </a>
 
     <script>
+        // Carga la API de IFrame Player de YouTube de forma asíncrona.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player1, player2, player3;
+        var videoPlayed1 = false, videoPlayed2 = false, videoPlayed3 = false;
+
+        // Esta función crea los <iframe> (reproductores de video)
+        // después de que el código de la API se descarga.
+        function onYouTubeIframeAPIReady() {
+            player1 = new YT.Player('player1', {
+                height: '100%',
+                width: '100%',
+                videoId: 'pHdzZYcw5Gc',
+                events: {
+                    'onStateChange': onPlayerStateChange1
+                }
+            });
+            player2 = new YT.Player('player2', {
+                height: '100%',
+                width: '100%',
+                videoId: 'Yx4lKEeCwss',
+                events: {
+                    'onStateChange': onPlayerStateChange2
+                }
+            });
+            player3 = new YT.Player('player3', {
+                height: '100%',
+                width: '100%',
+                videoId: 'gtggraD_N_w',
+                events: {
+                    'onStateChange': onPlayerStateChange3
+                }
+            });
+        }
+
+        // La API llama a esta función cuando el estado del reproductor cambia.
+        function onPlayerStateChange1(event) {
+            if (event.data == YT.PlayerState.PLAYING && !videoPlayed1) {
+                videoPlayed1 = true;
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'youtube_play',
+                    'video_title': 'Testimonio 1'
+                });
+            }
+        }
+        function onPlayerStateChange2(event) {
+            if (event.data == YT.PlayerState.PLAYING && !videoPlayed2) {
+                videoPlayed2 = true;
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'youtube_play',
+                    'video_title': 'Testimonio 2'
+                });
+            }
+        }
+        function onPlayerStateChange3(event) {
+            if (event.data == YT.PlayerState.PLAYING && !videoPlayed3) {
+                videoPlayed3 = true;
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'youtube_play',
+                    'video_title': 'Testimonio 3'
+                });
+            }
+        }
+        
         document.addEventListener('DOMContentLoaded', () => {
             // --- Lógica para el menú de hamburguesa ---
             const menuToggle = document.getElementById('menu-toggle');
